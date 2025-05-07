@@ -24,10 +24,6 @@ connection.query('CREATE DATABASE IF NOT EXISTS sistemaLoja;').then(() => {
   console.log(error);
 });
 
-// Configurando o Express para aceitar dados vindos de um formulário
-app.use(express.urlencoded({extended : false}));
-
-
 // Defne o EJS como Renderizador de páginas
 app.set("view engine", "ejs");
 // Define o uso da pasta "public" para uso de arquivos estáticos
@@ -52,4 +48,3 @@ app.listen(port, function (erro) {
     console.log(`Servidor iniciado com sucesso em: http://localhost:${port}`);
   }
 });
-
